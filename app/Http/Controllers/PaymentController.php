@@ -8,6 +8,17 @@ class PaymentController extends Controller
 {
     public function index()
     {
+        // return all user payments
+    }
+
+    public function addBalance()
+    {
 
     }
+
+    public function removeFromBalance()
+    {
+
+    }
+
 }
