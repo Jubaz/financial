@@ -30,7 +30,7 @@ class PaymentSearch
         }
 
         // get the results and return them.
-        return $query->get();
+        return $query->orderBy('created_at','desc')->get();
     }
 
 }
