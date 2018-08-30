@@ -6,7 +6,8 @@
 
         <div style="margin-bottom: 20px" class="col-lg-12">
             <a href="{{ route('payments.create') }}" class="btn btn-outline-primary">Create new payment</a>
-            <a href="{{ route('payments.index','type=credit') }}" class="btn btn-outline-primary">Income Payment</a>
+            <a href="{{ route('payments.index') }}" class="btn btn-outline-primary">All payment</a>
+            <a href="{{ route('payments.index','type=credit') }}" class="btn btn-outline-primary">Income payment</a>
             <a href="{{ route('payments.index','type=debit') }}" class="btn btn-outline-primary">Expenses payment</a>
         </div>
 
