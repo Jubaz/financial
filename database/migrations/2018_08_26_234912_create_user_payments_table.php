@@ -17,8 +17,9 @@ class CreateUserPaymentsTable extends Migration
             $table->increments('id')->unsigned();
             $table->unsignedInteger('user_id');
             $table->enum('type',['debit','credit']);
-            $table->integer('balance_after');
             $table->integer('balance_before');
+            $table->integer('balance_after');
+            $table->text('comment')->nullable();
             $table->timestamps();
             $table->foreign('user_id')
                 ->references('id')
