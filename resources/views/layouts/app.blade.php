@@ -29,9 +29,12 @@
 
                 <a><span>Balance {{Auth::user()->balance}} <i class="fas fa-dollar-sign"></i></span></a>
 
+                <a style="margin-left: 20px;" href="{{ route('payments.index') }}"><span>History</span></a>
+
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
+
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
