@@ -4,6 +4,7 @@ namespace App\Search;
 use App\Models\UserPayment;
 use App\Search\Filters\TypeFilter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentSearch
 {
@@ -30,7 +31,7 @@ class PaymentSearch
         }
 
         // get the results and return them.
-        return $query->orderBy('created_at','desc')->get();
+        return $query->where('user_id',Auth::id())->orderBy('created_at','desc')->get();
     }
 
 }
